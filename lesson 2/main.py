@@ -12,9 +12,9 @@ nieparzyste = []
 
 # liczby2 = [parzyste.append(liczba) if liczba % 2 == 0 else nieparzyste.append(liczba) for liczba in liczby]
         
-with open('test.txt', mode="a", encoding='utf8') as file:
-    file.write('\nTest polskich znaków ĄĆĘŻÓŁ ')
+# with open('test.txt', mode="a", encoding='utf8') as file:
+#     file.write('\nTest polskich znaków ĄĆĘŻÓŁ ')
     
-file = open('test.txt', mode="w", encoding='utf8')
-file.write('\nTest numer 2')
-file.close()
+# file = open('test.txt', mode="a", encoding='utf8')
+# file.write('\nTest numer 2')
+# file.close()
