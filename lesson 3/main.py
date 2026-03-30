@@ -23,8 +23,9 @@ class Bot():
         name_cells = poke_table.find_elements(By.CLASS_NAME, 'cell-name')
         for cell in name_cells:
             pokemon_name = cell.text
+            if '\n' in pokemon_name: pokemon_name = pokemon_name.split('\n')[1]
             self.names.append(pokemon_name)
-        
+            
                  
 if __name__ == "__main__":
     try:
