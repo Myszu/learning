@@ -1,0 +1,19 @@
+:root {
+    --bg-color: #242424;
+    --font-color: #f3f3f3;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--font-color);
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+    color: red;
+}
