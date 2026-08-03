@@ -8,5 +8,16 @@
     </head>
     <body>
         <a href="/sub">SUB STRONA</a>
+        {% if admins %}
+            {% for admin in admins %}
+                <div>Name: {{ admin.name }}</div>
+                <div>Email: {{ admin.email }}</div>
+            {% endfor %}
+        {% endif %}
+
+        <div>
+            <div>Email</div>
+            <div><input></div>
+        </div>
     </body>
 </html>

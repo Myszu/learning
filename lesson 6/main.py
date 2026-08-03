@@ -17,14 +17,19 @@ app.mount('/css', StaticFiles(directory='static/css'), name='css')
 app.mount('/img', StaticFiles(directory='static/img'), name='img')
 app.mount('/js', StaticFiles(directory='static/js'), name='js')
 
-
 # GET, POST
 @app.get('/', response_class=HTMLResponse)
 def index_get(
-    request: Request
+    request: Request,
+    db: Session = Depends(get_db)
 ):
+    admins = crud.Admins(db).get_all_admins()
+    admins[1].name = "test_dwa"
+    db.commit()
+    
     context = {
-        'request': request
+        'request': request,
+        'admins': admins
     }
     
     return templates.TemplateResponse(request, name='index.html', context=context)
