@@ -1,9 +1,15 @@
 import uvicorn
 from typing import Optional
-from fastapi import FastAPI, Request, Form
+from fastapi import FastAPI, Request, Form, Depends
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from sqlalchemy.orm import Session
+
+from db import models, crud
+from db.config import engine, get_db
+
+models.Base.metadata.create_all(bind=engine)
 
 app: FastAPI = FastAPI()
 templates: Jinja2Templates = Jinja2Templates(directory='templates')
