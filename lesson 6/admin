@@ -1,0 +1,46 @@
+10.08.2026 20:19:32 | ERROR - Admin Page not found or corrupted.
+Traceback (most recent call last):
+  File "C:\Users\Marcin\Documents\VSC\learning\lesson 6\routers\admin.py", line 32, in admin_get
+    return templates.TemplateResponse(request, name='indx.html', context=context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\starlette\templating.py", line 148, in TemplateResponse
+    template = self.get_template(name)
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\starlette\templating.py", line 115, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'indx.html' not found in search path: 'templates'
+10.08.2026 20:24:48 | ERROR - Admin Page not found or corrupted.
+Traceback (most recent call last):
+  File "C:\Users\Marcin\Documents\VSC\learning\lesson 6\routers\admin.py", line 32, in admin_get
+    return templates.TemplateResponse(request, name='indx.html', context=context)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\starlette\templating.py", line 148, in TemplateResponse
+    template = self.get_template(name)
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\starlette\templating.py", line 115, in get_template
+    return self.env.get_template(name)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\environment.py", line 1016, in get_template
+    return self._load_template(name, globals)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\environment.py", line 975, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Marcin\Documents\VSC\learning\lesson 6\.venv\Lib\site-packages\jinja2\loaders.py", line 209, in get_source
+    raise TemplateNotFound(
+    ...<2 lines>...
+    )
+jinja2.exceptions.TemplateNotFound: 'indx.html' not found in search path: 'templates'
