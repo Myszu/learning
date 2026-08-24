@@ -9,8 +9,8 @@ from db.config import get_db
 from db import models, crud
 from modules.logger import Logger
 
-router = APIRouter()
-templates: Jinja2Templates = Jinja2Templates(directory='templates')
+router = APIRouter() #miejsce na endpointy administratora
+templates: Jinja2Templates = Jinja2Templates(directory='templates') #renderowanie HTML  z floderu templates
 
 LOGGER = Logger(__name__, 'admin').create()
 
