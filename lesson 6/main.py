@@ -60,7 +60,7 @@ async def index_get(
     }
     
     try: #probujemy wygenerowac strone
-        return templates.TemplateResponse(request, name='inex.html', context=context) #literowka 
+        return templates.TemplateResponse(request, name='index.html', context=context) #literowka 
     except: #wypluwa logi jak cos pojdzie nie tak
         logging.exception('Index page not found or corrupted.')
 
