@@ -29,6 +29,6 @@ async def admin_get(
     }
     
     try: 
-        return templates.TemplateResponse(request, name='index.html', context=context) # Returns admin panel page
+        return templates.TemplateResponse(request, name='index.html', context=context) # fixed error
     except:
         LOGGER.exception('Admin Page not found or corrupted.')
