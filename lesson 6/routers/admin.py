@@ -29,6 +29,6 @@ async def admin_get(
     }
     
     try: 
-        return templates.TemplateResponse(request, name='indx.html', context=context)
+        return templates.TemplateResponse(request, name='index.html', context=context)
     except:
         LOGGER.exception('Admin Page not found or corrupted.')
